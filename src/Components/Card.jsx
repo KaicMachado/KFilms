@@ -1,6 +1,6 @@
 const Card = () => {
  return (
-  <div className="bg-white min-w-52 py-3 rounded-md md:w-48 flex flex-col md:gap-4 justify-center">
+  <div className="bg-white min-w-56 py-3 rounded-md md:w-48 flex flex-col md:gap-4 justify-center">
    <div>
     <img
      src="https://ogimg.infoglobo.com.br/rioshow/24884446-8f3-e73/FT1086A/deadpool-primeiro-filme.jpeg.jpg"
