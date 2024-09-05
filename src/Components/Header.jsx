@@ -11,7 +11,7 @@ const Header = () => {
      KFilms
     </p>
     <p className="text-white  font-bold text-xl lg:text-3xl col-span-full text-center ">
-     Aqui você encontrará os melhores filmes.
+     Aqui você encontrará os últimos lançamentos.
     </p>
    </div>
   </div>
