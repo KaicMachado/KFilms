@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 const Card = ({ title, src }) => {
  return (
-  <div className="bg-white md:max-w-80 pb-3 rounded-md md:w-64 flex flex-col md:gap-4 justify-center">
+  <div className="bg-white hover:scale-110 hover:cursor-pointer duration-300 md:max-w-80 pb-3 rounded-md md:w-64 flex flex-col md:gap-4 justify-center">
    <div className="">
     <img
      className="max-h-96  w-full"
