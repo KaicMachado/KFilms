@@ -33,7 +33,7 @@ const Modal = ({ title, desc, src, setModal, modal }) => {
       onClick={() => setModal(false)}
       className="text-xs w-max mx-auto hover:scale-110 duration-300 bg-red-700 text-slate-50 p-2 rounded-md"
      >
-      Fecha Detalhes
+      Fechar Detalhes
      </button>
     </div>
    )}
