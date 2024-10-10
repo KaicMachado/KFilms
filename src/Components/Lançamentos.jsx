@@ -1,4 +1,5 @@
 import Card from "./Card.jsx";
+import Modal from "./Modal.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -8,6 +9,8 @@ const Lançamentos = () => {
  const [dados, setDados] = useState({});
  const [carregando, setCarregando] = useState(true);
  const [width, setWidth] = useState(window.innerWidth);
+ const [modal, setModal] = useState(false);
+ const [currentSlide, setCurrentSlide] = useState(0);
 
  const handleResize = () => {
   setWidth(window.innerWidth);
@@ -51,6 +54,9 @@ const Lançamentos = () => {
   return <div>Carregando...</div>;
  }
 
+ const openModal = () => setModal(true);
+ const closeModal = () => setModal(false);
+
  return (
   <div className="relative p-14 md:py-12 md:px-16 bg-black">
    <h2 className="font-bold text-5xl text-white mb-10">Lançamentos</h2>
@@ -70,14 +76,27 @@ const Lançamentos = () => {
      )}
     </div>
    ) : (
-    <Swiper spaceBetween={50}>
-     {dados.map((filme) => (
+    <Swiper
+     spaceBetween={50}
+     onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+    >
+     {dados.map((filme, index) => (
       <SwiperSlide key={filme.id}>
        <Card
         title={filme.original_title}
         desc={filme.overview}
         src={filme.poster_path}
+        onClick={openModal}
        ></Card>
+
+       {modal && currentSlide === index && (
+        <Modal
+         title={filme.original_title}
+         desc={filme.overview}
+         src={filme.poster_path}
+         onClick={closeModal}
+        />
+       )}
       </SwiperSlide>
      ))}
     </Swiper>
