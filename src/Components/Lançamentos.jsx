@@ -52,7 +52,7 @@ const Lançamentos = () => {
  }
 
  return (
-  <div className="p-14 md:py-12 md:px-16 bg-black">
+  <div className="relative p-14 md:py-12 md:px-16 bg-black">
    <h2 className="font-bold text-5xl text-white mb-10">Lançamentos</h2>
    {width > 750 ? (
     <div className="flex gap-4 flex-wrap">
