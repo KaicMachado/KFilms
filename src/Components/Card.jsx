@@ -30,7 +30,7 @@ const Card = ({ title, src, desc }) => {
      setModal={setModal}
     />
    )}
-   <div className="relative bg-white md:hover:scale-110 hover:cursor-pointer duration-300 md:max-w-80 pb-3 rounded-md md:w-64 flex flex-col md:gap-4 justify-center mb-4">
+   <div className="relative bg-gray-900 text-white md:hover:scale-110 hover:cursor-pointer duration-300 md:max-w-80 pb-3 rounded-md md:w-64  flex flex-col md:gap-4 justify-center mb-4">
     <div>
      <img
       className="max-h-96  w-full"
